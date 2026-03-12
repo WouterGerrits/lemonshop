@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lemon Shop - Custom Websites</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="images/favicon.png">
+</head>
+<body>
+<header>
+    <img src="images/favicon.png" alt="Lemon Shop Logo">
+    <div class="owner-name">Ahmed Bakker</div>
+    <div class="menu-toggle">☰</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="customscripts.html">Custom Scripts</a>
+        <a href="gratisscripts.html">Gratis Scripts</a>
+        <a href="customwebsites.html">Custom Websites</a>
+        <a href="betaalmethodes.html">Betaalmethodes</a>
+    </nav>
+</header>
+
+<main>
+    <h1>Custom Websites</h1>
+
+    <div class="products">
+
+        <article class="product-card">
+                    <img src="images/fivemsite.png" alt="FiveM Site">
+            <h2>FiveM Roleplay Website</h2>
+            <p>
+            Een complete website voor jouw FiveM roleplay server. 
+            Inclusief pagina’s zoals Home, APV, Wetboek, serverregels en Discord links. 
+            Perfect voor servers die een professionele uitstraling willen.
+            </p>
+      <span class="price">Prijs op aanvraag</span>
+        </article>
+
+        <article class="product-card">
+                    <img src="images/lemonshopsite.png" alt="Script Site">
+            <h2>FiveM Script Shop Website</h2>
+            <p>
+            Een site speciaal gemaakt voor het verkopen of delen van FiveM scripts. 
+            Met categorieën, scripts, download knoppen en een overzichtelijke layout 
+            voor jouw community.
+            </p>
+     <span class="price">Prijs op aanvraag</span>
+        </article>
+
+        <article class="product-card">
+                    <img src="images/customwebsite.png" alt="Custom Website">
+            <h2>Volledig Custom Website</h2>
+            <p>
+            Wil je iets unieks? Dan kan er een volledig custom website worden gemaakt 
+            naar jouw wensen. Layout, kleuren, pagina’s en functies kunnen volledig 
+            worden aangepast voor jouw project of server.
+            </p>
+  <span class="price">Prijs op aanvraag</span>
+        </article>
+
+    </div>
+</main>
+
+<footer>
+    © 2026 Lemon Shop. Alle rechten voorbehouden.
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("nav");
+
+    toggle.addEventListener("click", function(e){
+        nav.classList.toggle("active");
+        e.stopPropagation();
+    });
+
+    document.addEventListener("click", function(e) {
+        if(nav.classList.contains("active") && !nav.contains(e.target) && e.target !== toggle) {
+            nav.classList.remove("active");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
