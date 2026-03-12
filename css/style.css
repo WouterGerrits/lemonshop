@@ -103,7 +103,8 @@ header, main, footer {
     background: rgba(0,0,0,0.6);
     border-radius: 12px;
     overflow: hidden;
-    width: 550px;
+    width: 100%;
+    max-width: 550px;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* duwt de download button naar beneden */
@@ -224,4 +225,54 @@ body::-webkit-scrollbar-thumb:hover {
 .filter-buttons button.active {
     background: #ffe500;
     color: black;
+}
+
+@media (max-width: 700px) {
+
+.products{
+    width:100%;
+    padding:0 10px;
+}
+
+.product-card{
+    width:100%;
+    max-width:100%;
+}
+
+}
+
+/* Mobiele header fix */
+@media (max-width:700px){
+
+header{
+    flex-wrap:wrap;
+    padding:0.8rem 1rem;
+}
+
+header img{
+    height:40px;
+}
+
+.owner-name{
+    position:static;
+    transform:none;
+    width:100%;
+    text-align:center;
+    margin-top:5px;
+    font-size:1rem;
+}
+
+nav{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:5px;
+}
+
+nav a{
+    margin:5px 8px;
+    font-size:0.9rem;
+}
+
 }
