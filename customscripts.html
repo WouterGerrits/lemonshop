@@ -9,9 +9,11 @@
 </head>
 <body>
 <header>
-    <img src="images/favicon.png" alt="Lemon Shop Logo">
+    <img src="images/favicon.png" alt="Lemon Logo">
 
-     <div class="owner-name">Ahmed Bakker</div>
+    <div class="owner-name">Ahmed Bakker</div>
+
+    <div class="menu-toggle">☰</div>
 
     <nav>
         <a href="index.html">Home</a>
@@ -20,7 +22,6 @@
         <a href="betaalmethodes.html">Betaalmethodes</a>
     </nav>
 </header>
-
 <main>
     <h1>Custom Scripts</h1>
 
@@ -50,6 +51,26 @@
 <footer>
     © 2026 Lemon Shop. Alle rechten voorbehouden.
 </footer>
-</body>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("nav");
+
+    // Open/close menu bij klikken op hamburger
+    toggle.addEventListener("click", function(e){
+        nav.classList.toggle("active");
+        e.stopPropagation(); // voorkomt dat click buiten menu het meteen sluit
+    });
+
+    // Sluit menu als je buiten klikt
+    document.addEventListener("click", function(e) {
+        if(nav.classList.contains("active") && !nav.contains(e.target) && e.target !== toggle) {
+            nav.classList.remove("active");
+        }
+    });
+});
+</script>
+
+</body>
 </html>
